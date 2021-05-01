@@ -1,7 +1,7 @@
 # Quick Barrier Fix
 A quick dirty fix that forces the barriers to rotate out of your way!
 
-[Video Demostration](https://i.lu.je/2021/4X8hmsAYGz.mp4)
+[Video Demostration](https://i.lu.je/2021/4X8hmsAYGz.mp4) [Another Video](https://i.lu.je/2021/78ALUQtx3i.mp4)
 
 ![Image Demo](https://i.lu.je/2021/FiveM_GTAProcess_2xNBRB5eoR.png)
 

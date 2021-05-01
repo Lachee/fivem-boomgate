@@ -12,7 +12,7 @@ A quick dirty fix that forces the barriers to rotate out of your way!
 ## Via Git ( recommended )
 From your resouces directory:
 ```
-git clone https://github.com/Lachee/fivem-busdriver.git "[lachee]/lachee-boomgate"
+git clone https://github.com/Lachee/fivem-boomgate.git "[lachee]/lachee-boomgate"
 ```
 
 Then in you server cfg:

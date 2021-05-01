@@ -49,7 +49,7 @@ Citizen.CreateThread(function()
             local heading = GetEntityHeading(object)
             local playerHeading = GetEntityHeading(PlayerPedId())
             local headingDiff = (playerHeading - heading + 180 + 360) % 360 - 180
-            if headingDiff > -Config.maxAngleDifference and headingDiff < onfig.maxAngleDifference then
+            if headingDiff > -Config.maxAngleDifference and headingDiff < Config.maxAngleDifference then
 
                 -- Trigger the sever callback
                 TriggerServerEvent('lacheeboom:requestBoomGate', GetEntityCoords(object))

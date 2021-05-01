@@ -1,9 +1,9 @@
 # Quick Barrier Fix
 A quick dirty fix that forces the barriers to rotate out of your way!
 
-(Video Demostration)[https://i.lu.je/2021/4X8hmsAYGz.mp4]
+[Video Demostration](https://i.lu.je/2021/4X8hmsAYGz.mp4)
 
-!(Image)[https://i.lu.je/2021/FiveM_GTAProcess_2xNBRB5eoR.png]
+![Image Demo](https://i.lu.je/2021/FiveM_GTAProcess_2xNBRB5eoR.png)
 
 # Installation
 ## Requirements

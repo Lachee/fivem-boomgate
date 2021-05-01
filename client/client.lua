@@ -13,6 +13,7 @@ end)
 function OpenGate(coords) 
     local object = FindNearestObject(Config.barriers, 1.0, coords)    
     local rotation = GetEntityRotation(object, 0)
+
     if object ~= nil and rotation.y > Config.rotLimit then
         Citizen.CreateThread(function()
             -- Prepare some counts
@@ -44,16 +45,23 @@ Citizen.CreateThread(function()
 
         local object = FindNearestObject(Config.barriers, Config.radius)
         if object then 
-            -- Trigger the sever callback
-            TriggerServerEvent('lacheeboom:requestBoomGate', GetEntityCoords(object))
-            
-            if Config.debug then
-                -- Render that we are drawing it
-                DrawZoneMarkerGrounded(GetEntityCoords(object), 3.0, { r = 255, g = 0, b = 0 }) 
-            end
 
-            -- Wait some significant time before we try again
-            Citizen.Wait(Config.gateCooldownTime)
+            local heading = GetEntityHeading(object)
+            local playerHeading = GetEntityHeading(PlayerPedId())
+            local headingDiff = (playerHeading - heading + 180 + 360) % 360 - 180
+            if headingDiff > -Config.maxAngleDifference and headingDiff < onfig.maxAngleDifference then
+
+                -- Trigger the sever callback
+                TriggerServerEvent('lacheeboom:requestBoomGate', GetEntityCoords(object))
+                
+                if Config.debug then
+                    -- Render that we are drawing it
+                    DrawZoneMarkerGrounded(GetEntityCoords(object), 3.0, { r = 255, g = 0, b = 0 }) 
+                end
+
+                -- Wait some significant time before we try again
+                Citizen.Wait(Config.gateCooldownTime)
+            end
         end
     end
 end)
